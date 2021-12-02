@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- jquery pour pouvoir utiliser les composants JS de boostap (modal, tooltip...) -->
+    <script src="./js/jquery-3.2.1.slim.min.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+
+    <!-- CSS boostrap -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/jquery-ui.min.css">
+
+    <script src="./js/popper.min.js"></script>
+
+    <!-- composants JS de boostrap (modal http://getbootstrap.com/docs/4.0/components/modal/ , collapse...) -->
+    <script src="./js/bootstrap.min.js"></script>
+
+    <script src="./js/form-jquery-validation.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div>
+
+            <div class="row align-self-center">
+                <h1><strong>TP AW </strong></h1>
+            </div>
+            <div class="row align-self-center">
+                <h6 class="m"> Avec Bootstrap 5</h6>
+            </div>
+
+            <div class="row">
+                <div class="col-2 p-3 align-self-end text-right">
+                    <label for="name"><strong>Nom</strong></label>
+                </div>
+                <div class="col-6 p-3">
+                    <input type="text" class="form-control" id="name">
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-2 p-3 align-self-end text-right">
+                    <label for="lastname"><strong>Prenom</strong></label>
+                </div>
+                <div class="col-6 p-3">
+                    <input type="text" class="form-control" id="lastname">
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-2 p-3 align-self-end text-right">
+                    <strong>Date de naissance</strong>
+                </div>
+                <div class="col-6 p-3">
+                    <input type="text" id="datepicker" class="form-control">
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-2 p-3 align-self-end text-right">
+                    <label for="adress"><strong>Adresse</strong></label>
+                </div>
+                <div class="col-6 p-3">
+                    <input type="text" class="form-control" id="adress">
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-2 p-3 align-self-end text-right">
+                    <label for="mail"><strong>Mail</strong></label>
+                </div>
+                <div class="col-6 p-3">
+                    <input type="email" class="form-control" id="mail">
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-2 p-3 align-self-end text-right">
+
+                </div>
+                <div class="col-6 p-3">
+                    <button onclick="checkValidation();" class="btn btn-info">Valider</button>
+                </div>
+
+            </div>
+
+
+
+            <div class="modal" role="dialog" id="myModal">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Message Modal</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                        </div>
+                        <div class="modal-body">
+                            <p> Veulliez remplir tous les champs svp.</p>
+                        </div>
+                        <div class="modal-footer">
+
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">ok</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal" role="dialog" id="imageModel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Message Modal</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                        </div>
+                        <!--  !important to make sure that will be applyed -->
+                        <div class="modal-body">
+                            <a href="http://maps.google.com/maps?q=Paris">
+                                <img style="width:400px !important;height:500px I !important;" src="https://maps.googleapis.com/maps/api/staticmap?markers=Paris&zoom=14&size=400x300&scale=2&key=AIzaSyAkmvI9DazzG9p77IShsz_Di7-5Qn7zkcg" />
+                            </a>
+                        </div>
+                        <div class="modal-footer">
+
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">ok</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
